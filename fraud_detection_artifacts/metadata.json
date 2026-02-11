@@ -1,0 +1,26 @@
+{
+  "created_at": "2026-02-11T13:05:54.063197Z",
+  "n_training_samples": 139977,
+  "class_distribution": {
+    "non_fraud": 132906,
+    "fraud": 7071
+  },
+  "models": [
+    "ANN",
+    "RandomForest",
+    "XGBoost",
+    "LightGBM",
+    "CatBoost"
+  ],
+  "best_model": "CatBoost",
+  "selection_metric": "f1",
+  "description": "Hour over-reliance fixed with cyclic encoding and regularization",
+  "fixes_applied": [
+    "\u2705 Cyclic hour encoding (sin/cos) - removes hard cutoffs",
+    "\u2705 Feature noise added - prevents memorization",
+    "\u2705 Interaction features - hour \u00d7 behavior patterns",
+    "\u2705 Model regularization - limits single-feature influence",
+    "\u2705 Limited tree depth - prevents overfitting",
+    "\u2705 Increased min_samples_leaf - smooths predictions"
+  ]
+}
